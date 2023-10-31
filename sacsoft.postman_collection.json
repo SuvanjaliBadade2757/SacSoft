@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "50a97787-7093-4ac5-996c-0c0cb27994f4",
+		"name": "sacsoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29338858"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/save/employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\" : 1,\r\n    \"Frist_Name\" : \"Ketan\",\r\n    \"Last_Name\":\"Bahadur\",\r\n    \"Email\":\"k.bahadur@infonext.com\",\r\n    \"Age\":32\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/save/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"save",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/delete/employee/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/delete/employee/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"delete",
+						"employee",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/update/employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\" : 1,\r\n    \"Frist_Name\" : \"Ketan\",\r\n    \"Last_Name\":\"Bahadur\",\r\n    \"Email\":\"k.bahadur23@infonext.com\",\r\n    \"Age\":32\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/update/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"update",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
